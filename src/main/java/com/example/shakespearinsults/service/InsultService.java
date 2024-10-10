@@ -13,6 +13,11 @@ public class InsultService {
     @Autowired
     private InsultRepository insultRepository;
 
+    public InsultService(InsultRepository insultRepository) {
+        this.insultRepository = insultRepository;
+    }
+
+
     public void create(Insult insult) {
         insultRepository.create(insult);
     }
